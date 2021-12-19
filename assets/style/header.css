@@ -1,0 +1,26 @@
+header {
+    padding: 15px 0;
+    background: var(--header-bg);
+    color: var(--header-text);
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.github-logo {
+    width: 50px;
+    filter: invert(92%) sepia(10%) saturate(170%) hue-rotate(180deg) brightness(104%) contrast(98%);
+}
+
+.title {
+    font-size: 1.45rem;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.3rem;
+}
