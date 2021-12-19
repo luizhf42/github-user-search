@@ -4,45 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/base.css">
     <title>GitHub User Search</title>
   </head>
   <body>
     <header>
-      <img src="assets/images/github-logo.svg" alt="Github Logo" />
-      <h1 class="intro">Search any GitHub user here!</h1>
+      <div class="header-main">
+        <img src="assets/images/github-logo.svg" alt="Github Logo" />
+        <h1 class="title">GitHub User Search</h1>
+      </div>
+      
+      <h2 class="intro">Search any GitHub user here!</h2>
     </header>
 
     <main>
       <form>
-        <input type="search" class="user-search" id="user-search" placeholder="Type the username (e.g., torvalds"/>
-				<button class="search-btn">Search!</button>
+        <input
+          type="search"
+          class="user-search"
+          id="user-search"
+          placeholder="Type the username (e.g., torvalds)"
+        />
+        <button class="search-btn">Search!</button>
       </form>
-			<section class="user-info">
-				<div class="main-info">
-					<img src="" alt="User Profile Pic">
-					<h2 class="name"></h2>
-					<h3 class="username"></h3>
-				</div>
 
-				<div class="bio">
-					<h2 class="title-bio">Bio</h2>
-					<p class="bio-text"></p>
-				</div>
+      <section class="user-info">
+        <div class="main-info">
+          <img src="" alt="User Profile Pic" />
+          <h2 class="name"></h2>
+          <h3 class="username"></h3>
+        </div>
 
-				<div class="social-info">
-					<p class="social-info-p repos-info">Repos: <span class="info-number repos-info-number"></span></p>
-					<p class="social-info-p stars-info">Stars: <span class="info-number stars-info-number"></span></p>
-					<p class="social-info-p followers-info">Followers: <span class="info-number followers-info-number"></span></p>
-					<p class="social-info-p following-info">Following: <span class="info-number following-info-number"></span></p>
-				</div>
+        <div class="bio">
+          <h2 class="title-bio">Bio</h2>
+          <p class="bio-text"></p>
+        </div>
 
-				<div class="personal-info">
-					<p class="personal-info-p"><img class="personal-info-icon" src="assets/images/company-icon.svg" alt=""><span class="personal-info-data company"></span></p>
-					<p class="personal-info-p"><img class="personal-info-icon" src="assets/images/location-dot.svg" alt=""><span class="personal-info-data location"></span></p>
-					<p class="personal-info-p"><img class="personal-info-icon" src="assets/images/twitter-icon.svg" alt=""><span class="personal-info-data website"></span></p>
-					<p class="personal-info-p"><img class="personal-info-icon" src="assets/images/link-icon.svg" alt=""><span class="personal-info-data twitter"></span></p>
-				</div>
-			</section>
+        <div class="social-info">
+          <p class="social-info-p repos-info">
+            Repos: <span class="info-number repos-info-number"></span>
+          </p>
+          <p class="social-info-p stars-info">
+            Stars: <span class="info-number stars-info-number"></span>
+          </p>
+          <p class="social-info-p followers-info">
+            Followers: <span class="info-number followers-info-number"></span>
+          </p>
+          <p class="social-info-p following-info">
+            Following: <span class="info-number following-info-number"></span>
+          </p>
+        </div>
+
+        <div class="personal-info">
+          <p class="personal-info-p">
+            <img
+              class="personal-info-icon"
+              src="assets/images/company-icon.svg"
+              alt=""
+            /><span class="personal-info-data company"></span>
+          </p>
+          <p class="personal-info-p">
+            <img
+              class="personal-info-icon"
+              src="assets/images/location-dot.svg"
+              alt=""
+            /><span class="personal-info-data location"></span>
+          </p>
+          <p class="personal-info-p">
+            <img
+              class="personal-info-icon"
+              src="assets/images/twitter-icon.svg"
+              alt=""
+            /><span class="personal-info-data website"></span>
+          </p>
+          <p class="personal-info-p">
+            <img
+              class="personal-info-icon"
+              src="assets/images/link-icon.svg"
+              alt=""
+            /><span class="personal-info-data twitter"></span>
+          </p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
