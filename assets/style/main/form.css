@@ -1,0 +1,29 @@
+form {
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--header--form-bg);
+  align-items: center;
+}
+
+.user-search {
+  height: 28px;
+  padding: 0 5px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.user-search::placeholder {
+  color: var(--input-placeholder);
+}
+
+.search-btn {
+  background: var(--cta);
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 16px;
+  color: var(--header--btn-text);
+}

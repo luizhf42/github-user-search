@@ -1,7 +1,7 @@
 header {
     padding: 15px 0;
-    background: var(--header-bg);
-    color: var(--header-text);
+    background: var(--header--form-bg);
+    color: var(--header--btn-text);
 }
 
 .header-main {
