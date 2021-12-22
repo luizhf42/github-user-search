@@ -1,0 +1,14 @@
+.social-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5px;
+}
+
+.social-info-p {
+    font-weight: 700;
+}
+
+.info-number {
+    font-weight: 400;
+}
