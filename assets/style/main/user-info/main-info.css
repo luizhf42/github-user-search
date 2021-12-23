@@ -13,11 +13,12 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .name {
   font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .username {

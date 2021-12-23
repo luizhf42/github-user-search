@@ -10,7 +10,7 @@ form {
 
 .user-search {
   width: 65%;
-  height: 28px;
+  min-height: 28px;
   padding: 0 5px;
   background: var(--bg);
   border: 1px solid var(--border);
