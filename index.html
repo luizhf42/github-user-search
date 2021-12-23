@@ -8,15 +8,18 @@
 
     <link rel="stylesheet" href="assets/style/header.css" />
 
-    <link rel="stylesheet" href="assets/style/main/main.css">
-    <link rel="stylesheet" href="assets/style/main/form.css">
-    <link rel="stylesheet" href="assets/style/main/before-search.css">
+    <link rel="stylesheet" href="assets/style/main/main.css" />
+    <link rel="stylesheet" href="assets/style/main/form.css" />
+    <link rel="stylesheet" href="assets/style/main/before-search.css" />
 
-    <link rel="stylesheet" href="assets/style/main/user-info/user-info.css">
-    <link rel="stylesheet" href="assets/style/main/user-info/main-info.css">
-    <link rel="stylesheet" href="assets/style/main/user-info/bio.css">
-    <link rel="stylesheet" href="assets/style/main/user-info/social-info.css">
-    <link rel="stylesheet" href="assets/style/main/user-info/personal-info.css">
+    <link rel="stylesheet" href="assets/style/main/user-info/user-info.css" />
+    <link rel="stylesheet" href="assets/style/main/user-info/main-info.css" />
+    <link rel="stylesheet" href="assets/style/main/user-info/bio.css" />
+    <link rel="stylesheet" href="assets/style/main/user-info/social-info.css" />
+    <link
+      rel="stylesheet"
+      href="assets/style/main/user-info/personal-info.css"
+    />
 
     <link rel="stylesheet" href="assets/style/footer.css" />
     <title>GitHub User Search</title>
@@ -24,7 +27,11 @@
   <body>
     <header>
       <div class="header-main">
-        <img src="assets/images/github-logo.svg" alt="Github Logo" class="github-logo"/>
+        <img
+          src="assets/images/github-logo.svg"
+          alt="Github Logo"
+          class="github-logo"
+        />
         <h1 class="title">GitHub User Search</h1>
       </div>
 
@@ -34,7 +41,7 @@
     <main>
       <form>
         <input
-          type="search"
+          type="text"
           class="user-search"
           id="user-search"
           placeholder="Username (e.g., torvalds)"
@@ -44,7 +51,7 @@
 
       <section class="user-info">
         <div class="main-info">
-          <img src="" alt="User Profile Pic" class="user-pic"/>
+          <img src="" alt="User Profile Pic" class="user-pic" />
           <div class="names">
             <h2 class="name"></h2>
             <h3 class="username"></h3>
@@ -60,8 +67,8 @@
           <p class="social-info-p repos-info">
             Repos: <span class="info-number repos-info-number"></span>
           </p>
-          <p class="social-info-p stars-info">
-            Stars: <span class="info-number stars-info-number"></span>
+          <p class="social-info-p hireable-info">
+            Hireable: <span class="social-info-text hireable-info"></span>
           </p>
           <p class="social-info-p followers-info">
             Followers: <span class="info-number followers-info-number"></span>
@@ -109,7 +116,13 @@
     </main>
 
     <footer>
-      <p>Made by <a class="author" href="https://github.com/luizhf42">Luiz Henrique</a></p>
+      <p>
+        Made by
+        <a class="author" href="https://github.com/luizhf42">Luiz Henrique</a>
+      </p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/script/script.js"></script>
   </body>
 </html>

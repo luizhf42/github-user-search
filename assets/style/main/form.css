@@ -14,12 +14,18 @@ form {
   padding: 0 5px;
   background: var(--bg);
   border: 1px solid var(--border);
+  color: var(--text);
   border-radius: 6px;
 }
 
 .user-search::placeholder {
   color: var(--input-placeholder);
   font-size: 0.9rem;
+}
+
+.error:focus {
+  outline: none;
+  border: 3px solid var(--input-error);
 }
 
 .search-btn {
