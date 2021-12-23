@@ -28,4 +28,5 @@ form {
   border-radius: 6px;
   padding: 8px 16px;
   color: var(--header--btn-text);
+  cursor: pointer;
 }
