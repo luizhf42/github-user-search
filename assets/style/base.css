@@ -24,6 +24,7 @@ body {
   color: var(--text);
   background: var(--bg);
   font-family: var(--main-font);
+  min-height: 100vh;
 }
 
 .social-info, .personal-info {

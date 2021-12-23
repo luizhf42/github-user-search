@@ -1,0 +1,16 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.author {
+    color: var(--cta);
+    text-decoration: none;
+}
+
+.author:hover {
+    text-decoration: underline;
+}
