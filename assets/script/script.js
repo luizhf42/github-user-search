@@ -26,9 +26,14 @@ const makeRequest = (searchedUser) => {
     .then((response) => {
       const userData = getData(response);
       showData(userData);
+      userInfoSection.style.visibility = "visible";
+      beforeSearchText.style.display = "none";
     })
     .catch((error) => {
       console.log(error);
+      userInfoSection.style.visibility = "hidden";
+      beforeSearchText.textContent = "An error ocurred!";
+
     });
 };
 
@@ -101,7 +106,7 @@ const showData = (userData) => {
   ];
 
   const formatter = new Intl.NumberFormat();
-  
+
   avatarElement.src = avatar_url;
 
   nameElement.textContent = name;
@@ -150,11 +155,10 @@ searchBtn.addEventListener("click", (event) => {
 
   if (usernameIsValid) {
     searchInput.classList.remove("error");
-    beforeSearchText.style.display = "none";
     makeRequest(searchedUser);
-    userInfoSection.style.visibility = "visible";
   } else {
     userInfoSection.style.visibility = "hidden";
+    beforeSearchText.style.display = "block";
     beforeSearchText.textContent = "Invalid username!";
     searchInput.classList.add("error");
     searchInput.focus();
