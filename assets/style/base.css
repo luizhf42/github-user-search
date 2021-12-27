@@ -22,10 +22,12 @@
 }
 
 body {
+  position: relative;
   color: var(--text);
   background: var(--bg);
   font-family: var(--main-font);
   min-height: 100vh;
+  max-height: 150vh;
 }
 
 .social-info, .personal-info {
@@ -33,4 +35,14 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 5px;
+}
+
+a {
+  color: var(--cta);
+  text-decoration: none;
+  font-size: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
 }

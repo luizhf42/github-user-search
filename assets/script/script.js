@@ -4,7 +4,7 @@ const githubUsernameRegex = /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i,
   userInfoSection = document.querySelector(".user-info"),
   beforeSearchText = document.querySelector(".before-search-text"),
   avatarElement = document.querySelector(".user-pic"),
-  nameElement = document.querySelector(".name"),
+  nameElement = document.querySelector(".name-a"),
   usernameElement = document.querySelector(".username"),
   bioElement = document.querySelector(".text-bio"),
   reposElement = document.querySelector(".repos-info"),
@@ -69,7 +69,7 @@ const getData = (response) => {
 };
 
 const showData = (userData) => {
-  const {
+  let {
     avatar_url,
     html_url,
     name,
@@ -100,6 +100,8 @@ const showData = (userData) => {
     twitterUsernameElement,
   ];
 
+  const formatter = new Intl.NumberFormat();
+  
   avatarElement.src = avatar_url;
 
   nameElement.textContent = name;
@@ -115,12 +117,11 @@ const showData = (userData) => {
     hireableElement.textContent = "Yes";
   } else {
     hireableElement.textContent = "No";
-
   }
 
-  followersElement.textContent = followers;
+  followersElement.textContent = formatter.format(followers);
 
-  followingElement.textContent = following;
+  followingElement.textContent = formatter.format(following);
 
   companyElement.textContent = company;
 
@@ -133,9 +134,11 @@ const showData = (userData) => {
   elements.forEach((element) => {
     if (element.textContent === "" || element.textContent === null) {
       element.textContent = "No info";
-      element.classList.add('no-info');
+      element.classList.add("no-info");
+    } else {
+      element.classList.remove("no-info");
     }
-  })
+  });
 };
 
 searchBtn.addEventListener("click", (event) => {
@@ -150,7 +153,6 @@ searchBtn.addEventListener("click", (event) => {
     beforeSearchText.style.display = "none";
     makeRequest(searchedUser);
     userInfoSection.style.visibility = "visible";
-
   } else {
     userInfoSection.style.visibility = "hidden";
     beforeSearchText.textContent = "Invalid username!";
