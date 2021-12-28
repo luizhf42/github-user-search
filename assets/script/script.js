@@ -42,11 +42,10 @@ const makeRequest = (searchedUser) => {
       beforeSearchText.style.display = "none";
     })
     .catch((error) => {
-      console.log(error);
+      console.log(error)
       userInfoSection.style.visibility = "hidden";
       beforeSearchText.textContent = "An error ocurred!";
       beforeSearchText.style.display = "block";
-
     });
 };
 
@@ -167,7 +166,8 @@ const showData = (userData) => {
 searchBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const searchedUser = searchInput.value;
+  let searchedUser = searchInput.value;
+  searchedUser = searchedUser.trim();
 
   const usernameIsValid = validateUsername(searchedUser);
 
