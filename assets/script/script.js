@@ -45,6 +45,8 @@ const makeRequest = (searchedUser) => {
       console.log(error);
       userInfoSection.style.visibility = "hidden";
       beforeSearchText.textContent = "An error ocurred!";
+      beforeSearchText.style.display = "block";
+
     });
 };
 
