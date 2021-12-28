@@ -3,7 +3,7 @@ footer {
   width: 100%;
 }
 
-@media screen and (min-height: 600px) {
+@media screen and (min-height: 615px) {
   footer {
     position: absolute;
     bottom: 0;

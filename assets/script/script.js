@@ -1,10 +1,15 @@
 // changes favicon according to the browser theme
-const faviconLink = document.querySelector("[href='assets/images/white-favicon.ico']");
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+const faviconLink = document.querySelector(
+  "[href='assets/images/white-favicon.ico']"
+);
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: light)").matches
+) {
   faviconLink.href = "assets/images/black-favicon.ico";
 }
 
-// request, data showing and d.o.m manipulation 
+// request, data showing and d.o.m manipulation
 const githubUsernameRegex = /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i,
   searchBtn = document.querySelector(".search-btn"),
   searchInput = document.querySelector(".user-search"),
@@ -40,7 +45,6 @@ const makeRequest = (searchedUser) => {
       console.log(error);
       userInfoSection.style.visibility = "hidden";
       beforeSearchText.textContent = "An error ocurred!";
-
     });
 };
 
@@ -142,6 +146,11 @@ const showData = (userData) => {
   twitterUsernameElement.textContent = twitter_username;
 
   websiteElement.textContent = blog;
+  if (blog === "") {
+    websiteElement.href = "#";
+  } else {
+    websiteElement.href = blog;
+  }
 
   elements.forEach((element) => {
     if (element.textContent === "" || element.textContent === null) {
