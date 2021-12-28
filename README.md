@@ -31,7 +31,7 @@ It's a interface that shows users simple info (profile pic, name, repos quantity
 
 ### Built with
 
-- Semantic HTML5 markup
+- HTML5 markup
 - CSS3
 - Flexbox
 - CSS Grid
