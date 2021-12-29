@@ -32,21 +32,21 @@ const validateUsername = (searchedUser) => {
   return githubUsernameRegex.test(searchedUser);
 };
 
-const makeRequest = (searchedUser) => {
-  axios
-    .get(`https://api.github.com/users/${searchedUser}`)
-    .then((response) => {
-      const userData = getData(response);
-      showData(userData);
-      userInfoSection.style.visibility = "visible";
-      beforeSearchText.style.display = "none";
-    })
-    .catch((error) => {
-      console.log(error)
-      userInfoSection.style.visibility = "hidden";
-      beforeSearchText.textContent = "An error ocurred!";
-      beforeSearchText.style.display = "block";
-    });
+const makeRequest = async (searchedUser) => {
+  try {
+    const response = await axios.get(
+      `https://api.github.com/users/${searchedUser}`
+    );
+    const userData = getData(response);
+    showData(userData);
+    userInfoSection.style.visibility = "visible";
+    beforeSearchText.style.display = "none";
+  } catch (error) {
+    userInfoSection.style.visibility = "hidden";
+    beforeSearchText.textContent = "An error ocurred!";
+    beforeSearchText.style.display = "block";
+    console.error(error);
+  }
 };
 
 const getData = (response) => {
