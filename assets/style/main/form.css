@@ -13,7 +13,6 @@ form {
   min-height: 28px;
   padding: 0 5px;
   border: 1px solid var(--border);
-  color: var(--text);
   border-radius: 6px;
 }
 
