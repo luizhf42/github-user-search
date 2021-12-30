@@ -9,8 +9,7 @@
   height: 100%;
   width: 16px;
   margin-right: 5px;
-  filter: invert(59%) sepia(3%) saturate(1003%) hue-rotate(171deg)
-    brightness(98%) contrast(90%);
+  
 }
 
 .no-info {

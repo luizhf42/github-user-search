@@ -1,0 +1,21 @@
+:root {
+  --border: #d0d7de;
+  --cta: #0969da;
+  --bg: #fff;
+  --header--form-bg: #24292f;
+  --text: #24292f;
+  --username: #59626c;
+  --header--btn-text: #fff;
+  --input-placeholder: #c1c2c4;
+  --no-info-text: #6f7074;
+  --input-error: #8f0000;
+  --input-focus: #1f6feb;
+}
+
+.personal-info-icon {
+  filter: invert(38%) sepia(3%) saturate(2616%) hue-rotate(171deg) brightness(89%) contrast(79%);
+}
+
+.user-search {
+  background: transparent;
+}
